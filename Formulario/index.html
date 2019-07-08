@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sign Up Form by Colorlib</title>
+    <title>Formulario IEEE-UD Aspirantes</title>
 
     <!-- Font Icon -->
     <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
@@ -19,16 +19,16 @@
     <div class="main">
 
         <div class="container">
-            <form method="POST" class="appointment-form" id="appointment-form">
+            <form onsubmit="return showCalc(event)" class="appointment-form">
                 <div class="row">
                     <div class="col-md-21">
                         <img class="img-fluid" src="images/logorama.png" alt="foto linda">
                     </div>
                 </div>
-                <h2>Descubre cual es el capitulo perfecto para ti</h2>
+                <h2>Descubre cual es el capitulo perfecto para ti ALPHA 0.1</h2>
                 <div class="select-list">
-                    <select name="Carrera" id="confirm_type">
-                        <option seleected value="">¿A que carrera perteneces?</option>
+                    <select name="Carrera" id="confirm_carreer" required>
+                        <option selected value="">¿A que carrera perteneces?</option>
                         <option value="ing. electrónica">ing. electrónica</option>
                         <option value="ing. catastral">ing. catastral</option>
                         <option value="ing. eléctrica">ing. eléctrica</option>
@@ -37,8 +37,8 @@
                     </select>
                 </div>
                 <div class="select-list">
-                    <select name="Semestre" id="confirm_type">
-                        <option seleected value="">¿A que semestre perteneces?</option>
+                    <select name="Semestre" id="confirm_semester" required>
+                        <option selected value="">¿A que semestre perteneces?</option>
                         <option value="by_email">1</option>
                         <option value="by_email">2</option>
                         <option value="by_email">3</option>
@@ -75,31 +75,36 @@
                 </div>
                 <input type="text" name="hobby" id="hobby" placeholder="Hobby favorito" required />
                 <div class="select-list">
-                    <select name="course_type" id="course_type">
-                        <option slected value="">¿Has estudiado algun idioma diferente al español?</option>
+                    <select name="language" id="language" required>
+                        <option selected value="">¿Has estudiado algun idioma diferente al español?</option>
                         <option value="si">Si</option>
                         <option value="no">No</option>
                     </select>
                 </div>
                 <div class="select-list">
-                    <select name="course_type" id="course_type">
-                        <option slected value="">¿Cual es tu nivel de trabajo en equipo?</option>
+                    <select name="course_type" id="course_type" required>
+                        <option selected value="">¿Cual es tu nivel de trabajo en equipo?</option>
                         <option value="bajo">Bajo</option>
                         <option value="medio">Medio</option>
                         <option value="alto">Alto</option>
                     </select>
                 </div>
                 <div class="form-submit">
-                    <input type="submit" name="submit" id="submit" class="submit" value="Calcular" />
+                    <button type="submit" class="submit" id="calc-btn">Calcular</button>
                 </div>
-            </form>
+                <div id="show-calc">
+                </div>
         </div>
+    </div>
 
     </div>
 
     <!-- JS -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        var _0x48a1 = ["\x63\x61\x6C\x63\x2D\x62\x74\x6E", "\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64", "\x41\x45\x53\x53", "\x53\x50\x53", "\x43\x49\x53", "\x43\x53\x53", "\x43\x4F\x4D\x53\x4F\x43", "\x52\x41\x53", "\x45\x44\x53", "\x43\x41\x53", "\x45\x4D\x42", "\x50\x45\x53", "\x49\x41\x53", "\x47\x52\x53\x53", "\x43\x4F\x4D\x50\x55\x54\x45\x52", "\x6C\x65\x6E\x67\x74\x68", "\x72\x61\x6E\x64\x6F\x6D", "\x66\x6C\x6F\x6F\x72", "\x70\x75\x73\x68", "\x74\x6F\x46\x69\x78\x65\x64", "\x73\x6F\x72\x74", "\x0D\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x3C\x68\x33\x3E", "\x3A\x20", "\x25\x3C\x2F\x68\x33\x3E\x0D\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20", "\x62\x65\x66\x6F\x72\x65\x65\x6E\x64", "\x69\x6E\x73\x65\x72\x74\x41\x64\x6A\x61\x63\x65\x6E\x74\x48\x54\x4D\x4C", "\x73\x68\x6F\x77\x2D\x63\x61\x6C\x63", "\x6C\x6F\x67", "\x64\x69\x73\x61\x62\x6C\x65\x64"]; var btn = document[_0x48a1[1]](_0x48a1[0]); var capitulos = [_0x48a1[2], _0x48a1[3], _0x48a1[4], _0x48a1[5], _0x48a1[6], _0x48a1[7], _0x48a1[8], _0x48a1[9], _0x48a1[10], _0x48a1[11], _0x48a1[12], _0x48a1[13], _0x48a1[14]]; function shuffle(_0x8f5dx4) { for (let _0x8f5dx5 = _0x8f5dx4[_0x48a1[15]] - 1; _0x8f5dx5 > 0; _0x8f5dx5--) { const _0x8f5dx6 = Math[_0x48a1[17]](Math[_0x48a1[16]]() * (_0x8f5dx5 + 1));[_0x8f5dx4[_0x8f5dx5], _0x8f5dx4[_0x8f5dx6]] = [_0x8f5dx4[_0x8f5dx6], _0x8f5dx4[_0x8f5dx5]] }; return _0x8f5dx4 } function showCalc() { var _0x8f5dx8 = []; var _0x8f5dx9 = 0; for (var _0x8f5dx5 = 0; _0x8f5dx5 < 13; _0x8f5dx5++) { _0x8f5dx8[_0x48a1[18]](parseInt(Math[_0x48a1[16]]() * 100)); _0x8f5dx9 += _0x8f5dx8[_0x8f5dx5] }; for (var _0x8f5dx5 = 0; _0x8f5dx5 < 13; _0x8f5dx5++) { _0x8f5dx8[_0x8f5dx5] = parseFloat((_0x8f5dx8[_0x8f5dx5])[_0x48a1[19]](1)) }; _0x8f5dx8[_0x48a1[20]](function (_0x8f5dx4, _0x8f5dxa) { return _0x8f5dxa - _0x8f5dx4 }); shuffle(capitulos); for (var _0x8f5dx5 = 0; _0x8f5dx5 < 13; _0x8f5dx5++) { card = _0x48a1[21] + capitulos[_0x8f5dx5] + _0x48a1[22] + _0x8f5dx8[_0x8f5dx5] + _0x48a1[23]; document[_0x48a1[1]](_0x48a1[26])[_0x48a1[25]](_0x48a1[24], card) }; console[_0x48a1[27]](_0x8f5dx8); btn[_0x48a1[28]] = true; return false }
+    </script>
 </body>
 
 </html>
